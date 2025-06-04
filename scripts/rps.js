@@ -18,54 +18,54 @@ let intervalID = null;
             function play(move){
                 score.pmove = move;
                 score.cmove = pickmove();
-                if(move === 'Rock'){
-                    if(score.cmove === 'Rock'){
+                if(move === 'rock'){
+                    if(score.cmove === 'rock'){
                         score.ties = score.ties+1;
                         score.result = 'Its a tie';
                         //alert(`You picked ${move}, Cmoputer picked ${cmove} It's a tie
                         //wins: ${score.wins} Ties: ${score.ties} Losses: ${score.losses}` );
-                    }else if(score.cmove === 'Paper'){
+                    }else if(score.cmove === 'paper'){
                         score.losses = score.losses+1;
                         score.result = 'You lose';
                         //alert(`You picked ${move}, Cmoputer picked ${cmove} You lose
                         //wins: ${score.wins} Ties: ${score.ties} Losses: ${score.losses}` );
-                    }else if(score.cmove === 'Scissors'){
+                    }else if(score.cmove === 'scissors'){
                         score.wins = score.wins+1;
                         score.result = 'You win';
                         //alert(`You picked ${move}, Cmoputer picked ${cmove} You Win
                         //wins: ${score.wins} Ties: ${score.ties} Losses: ${score.losses}` );
                     }
                  } 
-                 else if(move === 'Paper'){
-                    if(score.cmove === 'Rock'){
+                 else if(move === 'paper'){
+                    if(score.cmove === 'rock'){
                         score.wins = score.wins+1;
                         score.result = 'You win';
                         //alert(`You picked ${move}, Cmoputer picked ${cmove} You Win
                         //wins: ${score.wins} Ties: ${score.ties} Losses: ${score.losses}` );
-                    }else if(score.cmove === 'Paper'){
+                    }else if(score.cmove === 'paper'){
                         score.ties = score.ties+1;
                         score.result = 'Its a tie';
                         //alert(`You picked ${move}, Cmoputer picked ${cmove} It's a tie
                         //wins: ${score.wins} Ties: ${score.ties} Losses: ${score.losses}` );
-                    }else if(score.cmove === 'Scissors'){
+                    }else if(score.cmove === 'scissors'){
                         score.losses = score.losses+1;
                         score.result = 'You lose';
                         //alert(`You picked ${move}, Cmoputer picked ${cmove} You lose
                         //wins: ${score.wins} Ties: ${score.ties} Losses: ${score.losses}` );;
                     }
                 }
-                else if(move === 'Scissors'){
-                    if(score.cmove === 'Rock'){
+                else if(move === 'scissors'){
+                    if(score.cmove === 'rock'){
                         score.losses = score.losses+1;
                         score.result = 'You lose';
                         //alert(`You picked ${move}, Cmoputer picked ${cmove} You lose
                         //wins: ${score.wins} Ties: ${score.ties} Losses: ${score.losses}` );
-                    }else if(score.cmove === 'Paper'){
+                    }else if(score.cmove === 'paper'){
                         score.wins = score.wins+1;
                         score.result = 'You win';
                         //alert(`You picked ${move}, Cmoputer picked ${cmove} You Win
                         //wins: ${score.wins} Ties: ${score.ties} Losses: ${score.losses}` );
-                    }else if(score.cmove === 'Scissors'){
+                    }else if(score.cmove === 'scissors'){
                         score.ties = score.ties+1;
                         score.result = 'Its a tie';
                         //alert(`You picked ${move}, Cmoputer picked ${cmove} It's a tie
@@ -80,11 +80,11 @@ let intervalID = null;
                 let num1 = Math.random();
                 let move = '';
                 if(num1 >=0 && num1 <1/3){
-                    move = 'Rock';
+                    move = 'rock';
                 }else if(num1 >=1/3 && num1 <2/3){
-                    move = 'Paper';
+                    move = 'paper';
                 }else if(num1 >=2/3 && num1 <1){
-                    move = 'Scissors';
+                    move = 'scissors';
                 }
                 return move;
             }
