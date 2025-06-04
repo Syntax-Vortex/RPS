@@ -72,7 +72,7 @@ let intervalID = null;
                         //wins: ${score.wins} Ties: ${score.ties} Losses: ${score.losses}` );
                     }
                 }
-                score.moves = `You: <img src="assets/${score.pmove}-emoji.png" class="icon"> X <img src="assets/${score.cmove}-emoji.png" class="icon"> :Computer`;
+                score.moves = `You: <img src="/RPS/assets/${score.pmove}-emoji.png" class="icon"> X <img src="/RPS/assets/${score.cmove}-emoji.png" class="icon"> :Computer`;
                 updateScore();
                 localStorage.setItem('score',JSON.stringify(score))
             }
